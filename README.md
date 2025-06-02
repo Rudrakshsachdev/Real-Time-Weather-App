@@ -34,8 +34,8 @@
 
 Data is fetched using the [Rapid API](https://${API_HOST}/time_machine?lat=${lat}&lon=${lon}&date=${date}&units=auto):
 
-<b>📂 Project Structure</b>
-📦 Real-Time Weather App
+<b>📂 Project Structure</b><br>
+📦 Real-Time Weather App<br>
 ┣ 📄 index.html ← HTML structure<br>
 ┣ 📄 style.css ← Styling & responsiveness<br>
 ┣ 📄 script.js ← Weather fetching logic
