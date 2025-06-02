@@ -55,7 +55,7 @@ Data is fetched using the [Rapid API](https://${API_HOST}/time_machine?lat=${lat
 <b>🙋‍♂️ About the Developer</b>
 
 - 👨‍🎓 Name: Rudraksh  
-- 💻 First-year B.Tech CSE student  
+- 💻 First-year B.Tech CSE student @[IILM University]
 - 🌐 GitHub: [@Rudrakshsachdev](https://github.com/Rudrakshsachdev)  
 - ✉️ Email: 	rudraksh.sachdeva.19work@gmail.com
 
