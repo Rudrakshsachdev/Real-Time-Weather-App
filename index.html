@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <i class="fas fa-cloud-sun"></i>
+                <span>Weather Forecast</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link active" data-target="home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#" class="nav-link" data-target="about"><i class="fas fa-info-circle"></i> About this App</a></li>
+                    <li><a href="#" class="nav-link" data-target="usage"><i class="fas fa-book"></i> Usage Guide</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <!-- Search Section -->
+            <div class="search-section">
+                <div class="location-display">
+                    <i class="fas fa-location-dot"></i>
+                    <span id="current-location">Haldwani, Uttarakhand, India</span>
+                </div>
+                <div class="search-container">
+                    <input type="text" id="city-input" placeholder="Search for a city...">
+                    <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+                </div>
+            </div>
+            
+            <!-- Loading Spinner -->
+            <div class="spinner" id="spinner"></div>
+            
+            <!-- Weather Section -->
+            <div class="weather-display" id="weather-display">
+                <div class="weather-card">
+                    <div class="card-header">
+                        <i class="fas fa-temperature-high"></i>
+                        <h3>Temperatures</h3>
+                    </div>
+                    <div class="temp-value" id="temperature">16°C</div>
+                    <p class="temp-desc" id="temp-desc">Current temperature is 16°C with a minimum of 14°C and maximum of 18°C expected today.</p>
+                    <button class="cta-button">Full Forecast</button>
+                </div>
+                
+                <div class="weather-card">
+                    <div class="card-header">
+                        <i class="fas fa-tint"></i>
+                        <h3>Humidity Info</h3>
+                    </div>
+                    <div class="info-value" id="humidity">64%</div>
+                    <p class="info-desc" id="humidity-desc">Wind degree is 248. Feels like 15°C with humidity at 64%. Perfect weather for outdoor activities.</p>
+                    <button class="cta-button">Humidity Details</button>
+                </div>
+                
+                <div class="weather-card">
+                    <div class="card-header">
+                        <i class="fas fa-wind"></i>
+                        <h3>Wind Info</h3>
+                    </div>
+                    <div class="info-value" id="wind-speed">1.71 km/h</div>
+                    <p class="info-desc" id="wind-desc">Wind speed is 1.71 km/h. Sunrise at 6:45 AM, sunset at 5:30 PM. 10 hours of daylight today.</p>
+                    <button class="cta-button">Wind Patterns</button>
+                </div>
+            </div>
+            
+            <!-- Cities Section -->
+            <div class="cities-section">
+                <h2><i class="fas fa-city"></i> Weather of Other Common Places</h2>
+                
+                <table id="cities-table">
+                    <thead>
+                        <tr>
+                            <th>City</th>
+                            <th>Cloud %</th>
+                            <th>Feels Like</th>
+                            <th>Humidity</th>
+                            <th>Max Temp</th>
+                            <th>Min Temp</th>
+                            <th>Sunrise</th>
+                            <th>Sunset</th>
+                            <th>Temp</th>
+                            <th>Wind Deg</th>
+                            <th>Wind Speed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <div class="about-content">
+                <h2><i class="fas fa-info-circle"></i> About This Weather App</h2>
+                <p>Our Weather Forecast App provides accurate, real-time weather information for locations worldwide. Using the Meteosource API and sophisticated algorithms, we deliver precise forecasts to help you plan your day effectively.</p>
+                
+                <div class="features">
+                    <div class="feature-card">
+                        <h3><i class="fas fa-bolt"></i> Real-time Updates</h3>
+                        <p>Get up-to-the-minute weather information with our live data feeds that use the latest Meteosource API.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3><i class="fas fa-globe"></i> Global Coverage</h3>
+                        <p>Access weather forecasts for any location worldwide with detailed meteorological information.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3><i class="fas fa-mobile-alt"></i> Responsive Design</h3>
+                        <p>Our app works seamlessly across all devices - from smartphones to desktops - with an intuitive interface.</p>
+                    </div>
+                </div>
+                
+                <h3>Our Data Sources</h3>
+                <p>We use the Meteosource Weather API to provide the most accurate and reliable weather data. This API delivers comprehensive meteorological information including temperature, humidity, wind speed, and more.</p>
+                
+                <button class="cta-button">Learn More About Our Technology</button>
+            </div>
+        </section>
+        
+        <!-- Usage Guide Section -->
+        <section id="usage" class="content-section">
+            <div class="about-content">
+                <h2><i class="fas fa-book"></i> App Usage Guide</h2>
+                <p>Learn how to get the most out of our Weather Forecast App with this simple guide. Discover all the features and how to use them effectively for your daily planning.</p>
+                
+                <div class="usage-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <h3>Search for Locations</h3>
+                            <p>Use the search bar at the top of the app to find weather information for any city worldwide. You can search by city name, postal code, or even coordinates.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <h3>Understand Weather Cards</h3>
+                            <p>Each card displays different weather parameters. The temperature card shows current, min and max temperatures. The humidity card shows moisture levels and "feels like" temperature. The wind card displays speed and direction.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <h3>Compare Locations</h3>
+                            <p>Use the comparison table to see weather conditions in multiple cities at once. This is helpful for travel planning or comparing conditions in different regions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div>
+                            <h3>Navigate the App</h3>
+                            <p>Use the navigation buttons at the top to switch between the Home view, About information, and this Usage Guide.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="cta-button">Download User Manual</button>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Weather Forecast App | Powered by Meteosource API | All Rights Reserved</p>
+        </footer>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
